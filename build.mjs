@@ -1,6 +1,6 @@
 console.time("Finished");
 
-import { promises as fs } from "fs";
+import { promises as fs, existsSync } from "fs";
 import path from "path";
 
 import toml from "@iarna/toml";
@@ -13,6 +13,7 @@ const DIST_DIR = "dist";
 
 const INDEX = "index";
 const PAGE = "page";
+const GLOBAL = "global";
 
 const INCLUDE_DELIMS = ["((", "))"];
 const STRING_DELIMS = ["{{", "}}"];
@@ -27,6 +28,10 @@ for (const file of await fs.readdir(ASSETS_DIR))
 	await fs.copyFile(path.join(ASSETS_DIR, file), path.join(DIST_DIR, file));
 
 console.log("Reading strings files...");
+
+let global = {};
+if (existsSync(GLOBAL + ".toml"))
+	global = toml.parse((await fs.readFile(GLOBAL + ".toml")).toString("utf-8"));
 
 for (const file of await fs.readdir(STRINGS_DIR)) {
 	const ext = path.extname(file);
@@ -102,14 +107,7 @@ for (const [name, data] of strings.entries()) {
 		const property = path.substring(0, index);
 		const newData = data[property];
 
-		if ((newData ?? null) == null) {
-			console.error("error:");
-			console.error(`  in property lookup`);
-			console.error("");
-			console.error(`No property named "${property}" in ${data}.`);
-
-			process.exit(101);
-		}
+		if ((newData ?? null) == null) return newData;
 
 		return walk(path.substring(index + 1), newData);
 	};
@@ -125,7 +123,9 @@ for (const [name, data] of strings.entries()) {
 		const end = index + contents.substring(index).indexOf(STRING_DELIMS[1]);
 
 		const stringName = contents.substring(index + STRING_DELIMS[0].length, end);
-		const stringValue = special[stringName] ?? walk(stringName, data.toml);
+		const stringValue = special[stringName]
+			?? walk(stringName, global)
+			?? walk(stringName, data.toml);
 		
 		if ((stringValue ?? null) == null) {
 			console.error("error:");
