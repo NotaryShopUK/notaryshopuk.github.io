@@ -1,6 +1,6 @@
 console.time("Finished");
 
-import { promises as fs, existsSync } from "fs";
+import fs from "fs-extra";
 import path from "path";
 
 import toml from "@iarna/toml";
@@ -25,12 +25,16 @@ fs.mkdir(DIST_DIR, { recursive: true });
 console.log("Copying assets...");
 
 for (const file of await fs.readdir(ASSETS_DIR))
-	await fs.copyFile(path.join(ASSETS_DIR, file), path.join(DIST_DIR, file));
+	await fs.copy(
+		path.join(ASSETS_DIR, file),
+		path.join(DIST_DIR, file),
+		{ overwrite: true },
+	);
 
 console.log("Reading strings files...");
 
 let global = {};
-if (existsSync(GLOBAL + ".toml"))
+if (fs.existsSync(GLOBAL + ".toml"))
 	global = toml.parse((await fs.readFile(GLOBAL + ".toml")).toString("utf-8"));
 
 for (const file of await fs.readdir(STRINGS_DIR)) {
