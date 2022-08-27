@@ -28,7 +28,7 @@ jobs:
           app_location: "/"
           api_location: "/api"
           output_location: "/dist"
-          app_build_command: "mkdir -p dist ; touch dist/itworks"
+          app_build_command: "npm run build"
           skip_app_build: false
 
   close_pull_request_job:
