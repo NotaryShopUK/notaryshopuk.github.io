@@ -54,7 +54,18 @@ console.log("Preprocessing templates...");
 const templates = new Map();
 const preprocessTemplate = async (filePath, stack = []) => {
 	if (templates.has(filePath)) return templates.get(filePath);
-	if (stack.includes(filePath)) throw new Error("recursive include");
+	if (stack.includes(filePath)) {
+		console.error("error:");
+		console.error(`  in template "${filePath}"`);
+		console.error(`  for global preprocessing"`);
+		console.error("");
+		console.error(`Circular include detected, containing:`);
+
+		for (let i = stack.lastIndexOf(filePath); i < stack.length; i++)
+			console.error(`  "${stack[i]}"`);
+
+		process.exit(101);
+	}
 
 	let contents = (await fs.readFile(filePath)).toString("utf-8");
 	const dir = path.dirname(filePath);
@@ -88,10 +99,25 @@ for (const [name, data] of strings.entries()) {
 		const index = path.indexOf(".");
 		if (index == -1) return data[path];
 
-		const newData = data[path.substring(0, index)];
-		if (!newData) throw new ReferenceError();
+		const property = path.substring(0, index);
+		const newData = data[property];
+
+		if ((newData ?? null) == null) {
+			console.error("error:");
+			console.error(`  in property lookup`);
+			console.error("");
+			console.error(`No property named "${property}" in ${data}.`);
+
+			process.exit(101);
+		}
 
 		return walk(path.substring(index + 1), newData);
+	};
+
+	const special = {
+		"$content": data.markdown?.trim(),
+		"$name": name,
+		"$path": `/${name}.html`,
 	};
 
 	let index;
@@ -99,11 +125,17 @@ for (const [name, data] of strings.entries()) {
 		const end = index + contents.substring(index).indexOf(STRING_DELIMS[1]);
 
 		const stringName = contents.substring(index + STRING_DELIMS[0].length, end);
-		const stringValue = stringName == "."
-			? data.markdown.trim()
-			: walk(stringName, data.toml);
+		const stringValue = special[stringName] ?? walk(stringName, data.toml);
 		
-		if (!stringValue) throw new ReferenceError();
+		if ((stringValue ?? null) == null) {
+			console.error("error:");
+			console.error(`  in template "${template}"`);
+			console.error(`  for page "${name}"`);
+			console.error("");
+			console.error(`No value matched lookup {{${stringName}}}.`);
+
+			process.exit(101);
+		}
 		
 		contents = contents.substring(0, index)
 			+ stringValue
