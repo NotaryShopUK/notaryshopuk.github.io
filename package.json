@@ -2,8 +2,10 @@
   "name": "vanilla-basic",
   "version": "1.0.0",
   "scripts": { 
-    "start": "sirv ./src public --cors --single --no-clear --port 8000",
-    "build": "mkdir -p dist ; touch dist/maybeitworks"
+    "build": "node build.mjs"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@iarna/toml": "~2.2",
+    "marked": "~4.0"
+  }
 }
