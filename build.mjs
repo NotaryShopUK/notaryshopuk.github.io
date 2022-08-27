@@ -19,6 +19,8 @@ const STRING_DELIMS = ["{{", "}}"];
 
 const strings = new Map([["index", {}]]);
 
+fs.mkdir(DIST_DIR, { recursive: true });
+
 console.log("Copying assets...");
 
 for (const file of await fs.readdir(ASSETS_DIR))
