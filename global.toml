@@ -1,2 +1,23 @@
+# In ".toml" files (NOT ".md" files) lines starting with a hashtag are comments.
+
+# You can edit any file in the folder named "data", as well as this one. Make
+# sure to follow the file format carefully. Make sure there are no missing
+# punctuation marks or other syntactic elements. If any of these errors are
+# present, the site will fail to build and the site will not update. If you do
+# not notice the site updating within 5-10 minutes, try to find an error.
+
 [brand]
 name = "Notary Shop UK"
+
+[contact]
+# Make sure to include "<br />" at the end of each line, except the last.
+address = """
+Notary Shop Limited <br />
+10 Wherever Street <br />
+Someplace <br />
+England <br />
+AB12 3CD
+"""
+email = "hello@notaryshop.co.uk"
+open = "Mon-Fri 3.00pm until 2.00pm"
+phone = "(+44) 01642 123 456"
