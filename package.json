@@ -2,7 +2,7 @@
   "name": "vanilla-basic",
   "version": "1.0.0",
   "scripts": { 
-    "build": "npm install ; node build.mjs"
+    "build": "node build.mjs"
   },
   "devDependencies": {
     "@iarna/toml": "~2.2",
