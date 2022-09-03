@@ -5,6 +5,7 @@ nav {
 	height: max(calc(180px - calc(0.5 * var(--y))), 90px);
 
 	position: fixed;
+	z-index: 1;
 	top: 0px;
 	left: 0px;
 
