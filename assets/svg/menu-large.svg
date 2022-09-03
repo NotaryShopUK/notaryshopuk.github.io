@@ -1,0 +1,16 @@
+<svg
+	title="Menu toggle"
+	width="48" height="48"
+	viewBox="0 0 48 48"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<g clip-path="url(#clip0_178_2)">
+		<path d="M6 8H42V12H6V8ZM6 22H42V26H6V22ZM6 36H42V40H6V36Z" fill="white"/>
+	</g>
+
+	<defs>
+		<clipPath id="clip0_178_2">
+			<rect width="48" height="48" fill="white"/>
+		</clipPath>
+	</defs>
+</svg>

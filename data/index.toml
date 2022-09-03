@@ -1,3 +1,9 @@
+header = """
+<span class="green">Notarial services</span> <br />
+for <span class="italics">you</span> or <br />
+<span class="italics">your business</span>.
+"""
+
 [page]
 title = "Vanilla JavaScript App"
 description = "A demo app."

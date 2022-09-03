@@ -1,0 +1,61 @@
+:root {
+  --green-dark: #0fa34d;
+  --green-light: #13d263;
+
+  --opacity-body: 0.8;
+  --opacity-foot: 0.6;
+
+  --y: 0px;
+
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+  /* scroll-padding-top: ???; */
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --padding: 50px;
+    --padding-card: 25px;
+
+    --gap: 25px;
+    --gap-card: 10px;
+
+    --gutter: max(calc(50vw - 250px), 50px);
+    --gutter-header: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1800px) {
+  :root {
+    --padding: 75px;
+    --padding-card: 50px;
+
+    --gap: 50px;
+    --gap-card: 25px;
+
+    --gutter: max(calc(50vw - 500px), 100px);
+    --gutter-header: var(--gutter);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    --padding: 150px;
+    --padding-card: 50px;
+
+    --gap: 50px;
+    --gap-card: 25px;
+
+    --gutter: calc(50vw - 700px);
+    --gutter-header: var(--gutter);
+  }
+}
+
+body {
+  width: 100vw;
+  margin: 0px;
+
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}

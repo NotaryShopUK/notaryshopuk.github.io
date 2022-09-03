@@ -1,2 +1,8 @@
 const root = document.documentElement;
-addEventListener("scroll", () => root.style.setProperty("--y", root.scrollTop));
+const callback = () => {
+	root.style.setProperty("--y", `${root.scrollTop}px`);
+	root.style.setProperty("--yv", root.scrollTop.toString());
+};
+
+addEventListener("scroll", () => callback());
+callback();

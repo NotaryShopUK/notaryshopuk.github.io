@@ -1,0 +1,146 @@
+nav {
+	--progress: min(calc(var(--yv) / 180), 1);
+
+	width: 100%;
+	height: max(calc(180px - calc(0.5 * var(--y))), 90px);
+
+	position: fixed;
+	top: 0px;
+	left: 0px;
+
+	/* lerp from #0fa34d to #0008 (to be replaced by color-mix) */
+	background-color: rgba(
+		calc(15 - calc(15 * var(--progress))),
+		calc(163 - calc(163 * var(--progress))),
+		calc(77 - calc(77 * var(--progress))),
+		calc(1 - calc(0.5 * var(--progress)))
+	);
+	overflow: hidden;
+}
+
+nav a {
+	opacity: var(--opacity-body);
+
+	color: white;
+	text-decoration: none;
+
+	transition: color 0.1s;
+}
+
+nav a:hover {
+	opacity: 1;
+}
+
+nav button {
+	background: none;
+	border: none;
+
+	appearance: none;
+	cursor: pointer;
+}
+
+#nav-expand, #nav-collapse {
+	display: flex;
+	width: calc(100% - calc(2 * var(--gutter-header)));
+	padding: 0px var(--gutter-header);
+
+	align-items: center;
+	justify-content: space-between;
+
+	transform: translateY(max(calc(-1 * var(--y)), -180px));
+}
+
+#nav-expand {
+	height: 180px;
+
+	opacity: calc(1 - var(--progress));
+}
+
+#nav-expand-left {
+	display: flex;
+
+	align-items: center;
+	gap: 10px;
+}
+
+#nav-expand-links {
+	display: flex;
+
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 30px;
+}
+
+#nav-expand-links > div {
+	display: flex;
+
+	align-items: center;
+	gap: 30px;
+}
+
+@media screen and (max-width: 900px) {
+	#nav-expand-links {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#nav-expand-menu {
+		display: none;
+	}
+}
+
+#nav-collapse {
+	height: 90px;
+
+	backdrop-filter: blur(5px);
+	opacity: var(--progress);
+}
+
+#nav-collapse-left {
+	display: flex;
+
+	align-items: center;
+	gap: 30px;
+}
+
+#nav-collapse-links {
+	display: flex;
+
+	gap: 30px;
+}
+
+@media screen and (max-width: 900px) {
+	#nav-collapse-left > .contact-chip {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1800px) {
+	#nav-collapse-links {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	#nav-collapse-menu {
+		display: none;
+	}
+}
+
+.contact-chip {
+	display: flex;
+
+	align-items: center;
+	gap: 10px;
+
+	opacity: 1;
+}
+
+.nav-home {
+	opacity: 1;
+}
+
+#nav-spacer {
+	height: 180px;
+}
