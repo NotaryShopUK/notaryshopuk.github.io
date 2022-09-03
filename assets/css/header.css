@@ -1,0 +1,32 @@
+header {
+	display: flex;
+	width: calc(100% - calc(2 * var(--gutter-header)));
+	padding: 280px var(--gutter-header) 100px var(--gutter-header);
+
+	align-items: center;
+	justify-content: flex-start;
+
+	background-image:
+		linear-gradient(60deg, #00000080, #00000000 100%),
+		url(/img/bg1.jpg);
+	background-position-y: 60%;
+	background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+	header {
+		min-height: 500px;
+	}
+}
+
+header h1 {
+	color: white;
+}
+
+header .green {
+	color: var(--green-light);
+}
+
+header .italics {
+	font-style: italic;
+}

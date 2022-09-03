@@ -59,3 +59,48 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
 }
+
+h1, h2 {
+  margin: 0px;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 128px;
+  line-height: 128px;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  h1 {
+    font-size: 88px;
+    line-height: 88px;
+  }
+}
+
+h2 {
+  color: var(--green-dark);
+  font-size: 64px;
+}
+
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h3, p {
+  opacity: var(--opacity-body);
+}
