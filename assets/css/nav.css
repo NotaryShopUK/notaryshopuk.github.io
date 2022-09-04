@@ -113,19 +113,19 @@ nav button {
 }
 
 @media screen and (max-width: 900px) {
-	#nav-collapse-left > .contact-chip {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 1800px) {
 	#nav-collapse-links {
 		display: none;
 	}
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 900px) {
 	#nav-collapse-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1800px) {
+	#nav-collapse-left > .contact-chip {
 		display: none;
 	}
 }
