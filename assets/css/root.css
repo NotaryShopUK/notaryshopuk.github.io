@@ -11,7 +11,7 @@
   overflow-x: hidden;
 
   scroll-behavior: smooth;
-  /* scroll-padding-top: ???; */
+  scroll-padding-top: 180px;
 }
 
 @media screen and (max-width: 1200px) {
