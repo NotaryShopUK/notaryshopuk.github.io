@@ -115,7 +115,7 @@ p {
   line-height: 28px;
 }
 
-ul ul, ol ol {
+ul ul, ul ol, ul p, ol ul, ol ol, ol p {
   opacity: 1;
 }
 
