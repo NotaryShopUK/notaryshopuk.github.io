@@ -6,11 +6,29 @@
 # present, the site will fail to build and the site will not update. If you do
 # not notice the site updating within 5-10 minutes, try to find an error.
 
+# If you want to include a new line in some text, make sure to use "<br />".
+
+# For this, put "<p>" before each paragraph, and "</p>" afterwards.
+legal = """
+<p>
+Notarial operations are regulated by the Notaries' Society and associated
+organiations.
+</p>
+
+<p>
+Notary Shop is a trading name of Notary Shop Limited. Notary Shop is owned by
+Dermot Winters, a registered notary public with the Notaries' Society.
+</p>
+
+<p>
+Copyright © 2022 Notary Shop
+</p>
+"""
+
 [brand]
 name = "Notary Shop UK"
 
 [contact]
-# Make sure to include "<br />" at the end of each line, except the last.
 address = """
 Notary Shop Limited <br />
 10 Wherever Street <br />
@@ -19,5 +37,7 @@ England <br />
 AB12 3CD
 """
 email = "hello@notaryshop.co.uk"
+email-uri = "mailto:hello@notaryshop.co.uk" # if you update "email", update this
 open = "Mon-Fri 3.00pm until 2.00pm"
 phone = "(+44) 01642 123 456"
+phone-uri = "tel:+44-1642-123-456" # if you update "phone", update this

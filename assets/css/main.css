@@ -1,0 +1,238 @@
+main {
+	width: 100%;
+}
+
+section {
+	display: flex;
+	width: calc(100% - calc(2 * var(--gutter)));
+	padding: var(--padding) var(--gutter);
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap);
+}
+
+section h2 {
+	text-align: center;
+}
+
+section .row {
+	display: flex;
+
+	align-items: flex-start;
+	gap: var(--gap);
+}
+
+section .card {
+	display: flex;
+	padding: var(--padding-card);
+
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-card);
+
+	border: 1px solid black;
+}
+
+section .card > div:first-child {
+	display: flex;
+	width: 100%;
+
+	align-items: center;
+	justify-content: space-between;
+}
+
+section .card > div:first-child > span {
+	opacity: var(--opacity-body);
+}
+
+section .card figcaption {
+	align-self: flex-end;
+
+	opacity: var(--opacity-body);
+}
+
+section a.button {
+	margin-top: 10px;
+}
+
+section.slice {
+	background-position-y: center;
+	background-size: cover;
+}
+
+section.slice.right {
+	--offset: 0deg;
+
+	align-items: flex-end;
+}
+
+section.slice.left {
+	--offset: 180deg;
+
+	align-items: flex-start;
+}
+
+section.slice > div {
+	display: flex;
+
+	flex-direction: column;
+	gap: 25px;
+}
+
+section.slice.right > div {
+	align-items: flex-end;
+}
+
+section.slice.left > div {
+	align-items: flex-start;
+}
+
+section.slice h2, section.slice p {
+	color: white;
+}
+
+section.slice.right h2, section.slice.right p {
+	text-align: right;
+}
+
+section.slice.left h2, section.slice.left p {
+	text-align: left;
+}
+
+section.contact {
+	gap: 25px;
+}
+
+section.contact .contact-chips {
+	display: flex;
+
+	align-items: center;
+	gap: 30px;
+}
+
+section.contact .contact-chip {
+	display: flex;
+
+	align-items: center;
+	gap: 10px;
+
+	opacity: 1;
+
+	color: black;
+	text-decoration: none;
+}
+
+section.contact .contact-chip path {
+	fill: black;
+}
+
+section.contact > form {
+	display: flex;
+	width: 100%;
+	max-width: 500px;
+
+	flex-direction: column;
+	gap: 10px;
+}
+
+section.contact > form > div:last-child {
+	display: flex;
+	width: 100%;
+
+	align-items: center;
+	justify-content: space-between;
+}
+
+section.contact > form > div:last-child > .subtext {
+	margin-right: 25px;
+
+	opacity: var(--opacity-foot);
+
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 100;
+	line-height: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+	section .row {
+		max-width: 500px;
+
+		flex-direction: column;
+	}
+
+	section.slice.right, section.slice.left {
+		background-color: var(--green-dark);
+
+		align-items: center;
+	}
+
+	section.slice.right > div, section.slice.left > div {
+		align-items: center;
+	}
+
+	section.slice.right h2, section.slice.right p,
+	section.slice.left h2, section.slice.left p {
+		text-align: center;
+	}
+
+	section.contact .contact-chips {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1800px) {
+	section.slice {
+		background-image:
+			linear-gradient(
+				calc(105deg + var(--offset)),
+				transparent 0%,
+				transparent 33%,
+				var(--green-dark) 33%,
+				var(--green-dark) 100%
+			),
+			var(--bg);
+	}
+
+	section.slice > div {
+		width: calc(calc(67vw - 150px) - var(--gutter));
+	}
+
+	section .card:last-child {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+		min-height: calc(700px - calc(2 * var(--padding)));
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	section.slice {
+		background-image:
+			linear-gradient(
+				calc(105deg + var(--offset)),
+				transparent 0%,
+				transparent 50%,
+				var(--green-dark) 50%,
+				var(--green-dark) 100%
+			),
+			var(--bg);
+	}
+
+	section.slice > div {
+		width: calc(calc(50vw - 150px) - var(--gutter));
+	}
+}
+
+.or {
+	opacity: var(--opacity-foot);
+
+	font-style: italic;
+	font-weight: 100;
+}

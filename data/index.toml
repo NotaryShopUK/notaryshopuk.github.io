@@ -7,3 +7,96 @@ for <span class="italics">you</span> or <br />
 [page]
 title = "Vanilla JavaScript App"
 description = "A demo app."
+
+[section1]
+title = "Our services"
+link = "/services"
+
+[section1.card1]
+title = "Thing 1"
+body = """
+We are great at doing this thing. We do this thing a lot for a good price. When
+you need to do this thing for that thing, use us to do that/this thing. Often,
+people who do thing need to do thing. If this is you, don't hesitate to conact
+us about doing thing for you.
+"""
+
+[section1.card2]
+title = "Thing 2"
+body = """
+We are great at doing this thing. We do this thing a lot for a good price. When
+you need to do this thing for that thing, use us to do that/this thing. Often,
+people who do thing need to do thing. If this is you, don't hesitate to conact
+us about doing thing for you.
+"""
+
+[section1.card3]
+title = "Thing 3"
+body = """
+We are great at doing this thing. We do this thing a lot for a good price. When
+you need to do this thing for that thing, use us to do that/this thing. Often,
+people who do thing need to do thing. If this is you, don't hesitate to conact
+us about doing thing for you.
+"""
+
+[section2]
+title = "Professionalism"
+body = """
+We are very professional. This is a business where everybody is business and
+think and do. And business is of profession with utmost professionalism in
+standards and working of business. We are of in and doing thing with you for
+haha funny not permitted in a professional working environment. Everything is
+top-sneaky stuff for tax fraud money do yes.
+"""
+link = "/about"
+
+[section3]
+title = "Testimonials"
+link = "/testimonials"
+
+[section3.card1]
+date = "December 2019"
+body = """
+Dermot Winters scammed me out of my life savings. I am now destitute because of
+the evil Dermot Winters. They are horrible people who will do everything to
+destroy your life. Do not trust them at any cost. I chose Dermot Winters, and
+now my life is in ruins. They are the worst thing to every happen to me.
+"""
+client = "Some Asshat, Middlesbrough"
+
+[section3.card2]
+date = "December 2019"
+body = """
+Dermot Winters scammed me out of my life savings. I am now destitute because of
+the evil Dermot Winters. They are horrible people who will do everything to
+destroy your life. Do not trust them at any cost. I chose Dermot Winters, and
+now my life is in ruins. They are the worst thing to every happen to me.
+"""
+client = "Some Asshat, Middlesbrough"
+
+[section3.card3]
+date = "December 2019"
+body = """
+Dermot Winters scammed me out of my life savings. I am now destitute because of
+the evil Dermot Winters. They are horrible people who will do everything to
+destroy your life. Do not trust them at any cost. I chose Dermot Winters, and
+now my life is in ruins. They are the worst thing to every happen to me.
+"""
+client = "Some Asshat, Middlesbrough"
+
+[section4]
+title = "Professionalism 2"
+body = """
+We are very professional. This is a business where everybody is business and
+think and do. And business is of profession with utmost professionalism in
+standards and working of business. We are of in and doing thing with you for
+haha funny not permitted in a professional working environment. Everything is
+top-sneaky stuff for tax fraud money do yes.
+"""
+link = "/about"
+
+[section5]
+title = "Give us your money"
+subtext = """
+Data is stored in accordance with our <a href="/privacy">Privacy Policy</a>.
+"""
