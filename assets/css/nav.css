@@ -27,11 +27,13 @@ nav a {
 	color: white;
 	text-decoration: none;
 
-	transition: color 0.1s;
+	transition: all 100ms;
 }
 
 nav a:hover {
 	opacity: 1;
+
+	color: white;
 }
 
 nav button {
