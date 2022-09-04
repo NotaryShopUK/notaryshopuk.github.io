@@ -1,3 +1,5 @@
+image = "/img/bg2.jpg"
+
 [page]
 title = "Test page"
 description = "A page for testing."

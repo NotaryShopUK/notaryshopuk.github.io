@@ -1,0 +1,50 @@
+article {
+	width: 100%;
+	max-width: min(calc(100% - calc(var(--gutter) * 2)), 1000px);
+	padding: var(--padding) var(--gutter);
+	margin: auto;
+}
+
+article h1::after {
+	content: "Don't use single-hashtag headers, use double-hashtag instead!";
+
+	color: red;
+}
+
+article h2, article h3, article h4, article h5 {
+	margin: 20px 0px;
+}
+
+article p {
+	margin: 10px 0px;
+}
+
+article img {
+	width: 100%;
+	max-width: 500px;
+	margin: 10px;
+
+	float: right;
+	transform: translateX(10px);
+}
+
+article blockquote {
+	padding-left: 10px;
+
+	border-left: 5px solid rgba(0, 0, 0, var(--opacity-grey));
+}
+
+article code {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px 0px;
+
+	border-radius: 5px;
+
+	background-color: rgba(0, 0, 0, var(--opacity-grey));
+}
+
+article pre > code {
+	width: calc(100% - 20px);
+	padding: 10px;
+}

@@ -1,4 +1,6 @@
 header {
+	--bg: url(/img/bg1.jpg);
+
 	display: flex;
 	width: calc(100% - calc(2 * var(--gutter-header)));
 	padding: 280px var(--gutter-header) 100px var(--gutter-header);
@@ -8,7 +10,7 @@ header {
 
 	background-image:
 		linear-gradient(60deg, #00000080, #00000000 100%),
-		url(/img/bg1.jpg);
+		var(--bg);
 	background-position-y: 60%;
 	background-size: cover;
 }
