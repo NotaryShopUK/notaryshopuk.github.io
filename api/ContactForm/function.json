@@ -23,7 +23,7 @@
 
 			"apiKey": "SendGridApiKey",
 			"to": "dermot.winters@notaryshop.co.uk",
-			"from": "api@notaryshop.co.uk",
+			"from": "Contact enquiries <api@notaryshop.co.uk>",
 			"subject": "Enquiry via contact form"
 		}
 	]
