@@ -45,12 +45,16 @@ section .card > div:first-child {
 
 section .card > div:first-child > span {
 	opacity: var(--opacity-body);
+
+	text-align: right;
 }
 
 section .card figcaption {
 	align-self: flex-end;
 
 	opacity: var(--opacity-body);
+
+	text-align: right;
 }
 
 section a.button {
