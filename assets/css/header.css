@@ -5,14 +5,18 @@ header {
 	width: calc(100% - calc(2 * var(--gutter-header)));
 	padding: 280px var(--gutter-header) 100px var(--gutter-header);
 
-	align-items: center;
-	justify-content: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 10px;
 
 	background-image:
 		linear-gradient(60deg, #00000080, #00000000 100%),
 		var(--bg);
 	background-position-y: 60%;
 	background-size: cover;
+
+	color: white;
 }
 
 @media screen and (min-width: 1200px) {
@@ -23,6 +27,11 @@ header {
 
 header h1 {
 	color: white;
+}
+
+header p {
+	font-size: 32px;
+	line-height: 40px;
 }
 
 header .green {
