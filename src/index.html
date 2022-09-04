@@ -118,9 +118,14 @@
 				<span class="or">&mdash; or &mdash;</span>
 
 				<form method="POST" action="//httpbin.org/post">
-					<input name="name" type="text" placeholder="Your name" required />
-					<input name="email" type="email" placeholder="Email address" required />
-					<textarea name="query" placeholder="Query" required></textarea>
+					<label for="name">Your name</label>
+					<input id="name" name="name" type="text" placeholder="Your name" required />
+
+					<label for="email">Email address</label>
+					<input id="email" name="email" type="email" placeholder="Email address" required />
+
+					<label for="query">Query</label>
+					<textarea id="query" name="query" placeholder="Query" required></textarea>
 
 					<div>
 						<p class="subtext">{{section5.subtext}}</p>
