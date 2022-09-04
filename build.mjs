@@ -95,13 +95,15 @@ const preprocessTemplate = async (filePath, stack = []) => {
 	return contents;
 };
 
-for (const templateName of [INDEX, PAGE])
-	await preprocessTemplate(path.join(TEMPLATE_DIR, templateName + ".html"));
+const templateFiles = await fs.readdir(TEMPLATE_DIR);
+for (const templateFile of templateFiles)
+	await preprocessTemplate(path.join(TEMPLATE_DIR, templateFile));
 
 console.log("Rendering pages...");
 
 for (const [name, data] of strings.entries()) {
-	const template = path.join(TEMPLATE_DIR, (name == INDEX ? INDEX : PAGE) + ".html");
+	const templateName = templateFiles.includes(name + ".html") ? name : PAGE;
+	const template = path.join(TEMPLATE_DIR, templateName + ".html");
 	let contents = templates.get(template);
 
 	const walk = (path, data) => {
