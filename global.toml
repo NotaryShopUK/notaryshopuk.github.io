@@ -41,3 +41,8 @@ email-uri = "mailto:hello@notaryshop.co.uk" # if you update "email", update this
 open = "Mon-Fri 3.00pm until 2.00pm"
 phone = "(+44) 01642 123 456"
 phone-uri = "tel:+44-1642-123-456" # if you update "phone", update this
+
+[map]
+title = "How to find us"
+lon = -1.523174
+lat = 54.545047

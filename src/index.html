@@ -117,26 +117,18 @@
 					</a>
 				</div>
 
-				<span class="or">&mdash; or &mdash;</span>
-
-				<form method="POST" action="//httpbin.org/post">
-					<label for="name">Your name</label>
-					<input id="name" name="name" type="text" placeholder="Your name" required />
-
-					<label for="email">Email address</label>
-					<input id="email" name="email" type="email" placeholder="Email address" required />
-
-					<label for="query">Query</label>
-					<textarea id="query" name="query" placeholder="Query" required></textarea>
-
-					<div>
-						<p class="subtext">{{section5.subtext}}</p>
-						<button class="green">Submit</button>
-					</div>
-				</form>
+				<div
+					id="map"
+					data-lon-lat="{{map.lon}}, {{map.lat}}"
+					data-name="{{brand.name}}"
+					data-address="{{contact.address}}"
+				></div>
 			</section>
 		</main>
 
 		((footer.html))
+
+		<script src="https://cdn.jsdelivr.net/npm/ol@7.1.0/dist/ol.js"></script>
+		<script src="/map.js"></script>
 	</body>
 </html>
