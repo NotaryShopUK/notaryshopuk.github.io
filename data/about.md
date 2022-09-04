@@ -4,13 +4,14 @@
 
 We provide a wide range of notarial services to members of the public and to
 business entities. Our registered notary is Dermot Winters. 
+
 Mr Winters is a vastly experienced lawyer and a Notary Public, appointed by the Court of Faculties of the
 Archbishop of Canterbury and regulated by the Master of Faculties. 
 
-Our firm is based in Darlington, Co. Durham.  We provide notarial services but throughout the Northeast of England.
+Our firm is based in Darlington, Co. Durham.  We provide notarial services throughout the Northeast of England.
 
-We welcome out-of-hours and/or off-site appointments including weekends, though
-strictly subject to availability.
+We welcome out-of-hours and/or off-site appointments including weekends
+(strictly subject to availability).
 
 We aim to respond to client needs within 48 hours of instruction, but if we are
 unavailable for any reason, we will be able to recommend a highly qualified
@@ -20,7 +21,7 @@ suitable alternative within the region.
 
 A Notary Public is a highly-qualified and highly-regulated legal professional
 who specialises in authenticating, preparing, reviewing, and advising various
-types of documentation which invariably relate to overseas transactions.
+types of documentation which invariably relate to overseas jurisdictions.
 
 Circumstances commonly are that an overseas body will require verification of a
 specific document (and verification of the individual signing the document) and
