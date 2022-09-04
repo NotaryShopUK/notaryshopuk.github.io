@@ -8,7 +8,7 @@ module.exports = async function (context, req) {
 		body: "Hello!",
 	};
 
-	context.email = {
+	return {
 		personalizations: [{
 			to: [{ email: "dermot.winters@notaryshop.co.uk" }],
 		}],
