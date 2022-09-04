@@ -3,10 +3,11 @@
 **Hello, and welcome to Notary Shop UK.**
 
 We provide a wide range of notarial services to members of the public and to
-business entities. Our registered notary is Dermot Winters. Mr Winters is a
-lawyer and a Notary Public, appointed by the Court of Faculties of the
-Archbishop of Canterbury and regulated by the Master of Faculties. Our firm is
-based in Darlington, but practices throughout the Northeast of England.
+business entities. Our registered notary is Dermot Winters. 
+Mr Winters is a vastly experienced lawyer and a Notary Public, appointed by the Court of Faculties of the
+Archbishop of Canterbury and regulated by the Master of Faculties. 
+
+Our firm is based in Darlington, Co. Durham.  We provide notarial services but throughout the Northeast of England.
 
 We welcome out-of-hours and/or off-site appointments including weekends, though
 strictly subject to availability.
