@@ -21,7 +21,7 @@ nav {
 	overflow: hidden;
 }
 
-nav a {
+nav a, aside a {
 	opacity: var(--opacity-body);
 
 	color: white;
@@ -30,13 +30,15 @@ nav a {
 	transition: all 100ms;
 }
 
-nav a:hover {
+nav a:hover, aside a:hover {
 	opacity: 1;
 
 	color: white;
 }
 
-nav button {
+nav button, aside button {
+	padding: 0px;
+
 	background: none;
 	border: none;
 
@@ -130,6 +132,47 @@ nav button {
 	#nav-collapse-left > .contact-chip {
 		display: none;
 	}
+}
+
+#nav-popup {
+	display: flex;
+	width: calc(100vw - 100px);
+	height: calc(100vh - 100px);
+	padding: 50px;
+
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	left: 100vw;
+
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 50px;
+
+	background-color: var(--green-dark);
+
+	overflow-y: auto;
+	transition: left 500ms;
+}
+
+#nav-popup.visible {
+	left: 0px;
+}
+
+#nav-popup > div:not(:first-child) {
+	display: flex;
+
+	flex-direction: column;
+	gap: 10px;
+}
+
+#nav-popup-header {
+	display: flex;
+	width: 100%;
+
+	align-items: center;
+	justify-content: space-between;
 }
 
 .contact-chip {

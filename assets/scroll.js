@@ -15,3 +15,7 @@ const callback = () => {
 
 addEventListener("scroll", () => callback());
 callback();
+
+const navPopup = document.getElementById("nav-popup");
+for (const toggle of document.getElementsByClassName("nav-menu-toggle"))
+	toggle.addEventListener("click", () => navPopup.classList.toggle("visible"));
