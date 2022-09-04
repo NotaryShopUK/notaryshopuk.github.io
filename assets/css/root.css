@@ -176,6 +176,10 @@ a.button.white, button.white {
   --text-active: var(--green-dark);
 }
 
+address {
+  font-style: normal;
+}
+
 blockquote, figure {
   margin: 0px;
 }
