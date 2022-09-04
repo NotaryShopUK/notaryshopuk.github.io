@@ -12,7 +12,7 @@ article h1::after {
 }
 
 article h2, article h3, article h4, article h5 {
-	margin: 20px 0px;
+	margin: 40px 0px 20px 0px;
 }
 
 article p {
