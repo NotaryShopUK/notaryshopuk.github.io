@@ -1,0 +1,9 @@
+image = "/img/bg2.jpg"
+title = "Give us your money"
+subtext = """
+Data is stored in accordance with our <a href="/privacy">Privacy Policy</a>.
+"""
+
+[page]
+title = "Contact us"
+description = "Get in touch"
