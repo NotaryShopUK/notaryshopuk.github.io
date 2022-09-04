@@ -100,7 +100,7 @@ h2 {
   }
 }
 
-h3, p {
+h3, p, ul, ol {
   margin: 0px;
 
   opacity: var(--opacity-body);
@@ -113,6 +113,10 @@ h3 {
 
 p {
   line-height: 28px;
+}
+
+ul ul, ol ol {
+  opacity: 1;
 }
 
 a {
