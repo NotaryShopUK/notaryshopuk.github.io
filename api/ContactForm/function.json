@@ -1,0 +1,30 @@
+{
+	"bindings": [
+		{
+			"type": "httpTrigger",
+			"direction": "in",
+			"name": "req",
+
+			"authLevel": "anonymous",
+			"methods": [
+				"get",
+				"post"
+			]
+		},
+		{
+			"type": "http",
+			"direction": "out",
+			"name": "res"
+		},
+		{
+			"type": "sendGrid",
+			"direction": "out",
+			"name": "email",
+
+			"apiKey": "SendGridApiKey",
+			"to": "{ToEmail}",
+			"from": "{FromEmail}",
+			"subject": "Enquiry via contact form"
+		}
+	]
+}
