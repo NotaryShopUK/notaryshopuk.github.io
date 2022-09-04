@@ -46,7 +46,7 @@ map.on("click", (event) => {
 	const address = encodeURIComponent(
 		container
 			.getAttribute("data-address")
-			.replace("<br />", "")
+			.replaceAll("<br />", "")
 	);
 	window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`);
 });
