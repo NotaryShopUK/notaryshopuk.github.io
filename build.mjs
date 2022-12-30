@@ -65,6 +65,8 @@ const processAssetsDir = async (dirs = []) => {
 	const assets = path.join(ASSETS_DIR, ...dirs);
 	const dist = path.join(DIST_DIR, ...dirs);
 
+	if (!fs.existsSync(dist)) await fs.mkdir(dist);
+
 	for (const entry of await fs.readdir(assets, { withFileTypes: true }))
 		if (entry.isDirectory())
 			await processAssetsDir(dirs.concat([ entry.name ]));
