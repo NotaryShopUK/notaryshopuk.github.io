@@ -11,17 +11,12 @@
 # For this, put "<p>" before each paragraph, and "</p>" afterwards.
 legal = """
 <p>
-Notarial operations are regulated by the Notaries' Society and associated
-organiations.
+Notary Shop is a trading name of Notary ABC Limited. Notary services are
+provided by Dermot Winters, a registered Notary Public of England and Wales.
 </p>
 
 <p>
-Notary Shop is a trading name of Notary Shop Limited. Notary Shop is owned by
-Dermot Winters, a registered notary public with the Notaries' Society.
-</p>
-
-<p>
-Copyright © 2022 Notary Shop
+Copyright © 2022 Notary ABC Limited.
 </p>
 """
 
