@@ -70,6 +70,20 @@ nav button, aside button {
 	gap: 10px;
 }
 
+nav #nav-expand-left > :last-child {
+	width: min(calc(calc(100vw - calc(2 * var(--gutter))) - 96px), 253px);
+}
+
+@media screen and (max-width: 500px) {
+	nav #nav-expand-left > :first-child {
+		display: none;
+	}
+
+	#nav-popup #nav-expand-left > :last-child {
+		display: none;
+	}
+}
+
 #nav-expand-links {
 	display: flex;
 
