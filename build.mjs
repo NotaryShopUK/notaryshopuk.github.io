@@ -6,6 +6,43 @@ import path from "path";
 import toml from "@iarna/toml";
 import { marked } from "marked";
 
+import { minify as htmlMinifier } from "html-minifier";
+import { minify as terser } from "terser";
+import CleanCSS from "clean-css";
+
+const cleanCss = new CleanCSS({
+	inline: false,
+	level: 2,
+});
+
+const minify = async (inp, out) => {
+	const ext = path.extname(inp);
+	if (![".html", ".js", ".css"].includes(ext)) {
+		await fs.copy(inp, out, { overwrite: true });
+		return;
+	}
+
+	const code = await fs.readFile(inp, "utf-8");
+	let minified;
+
+	switch (ext) {
+		case ".html":
+			minified = htmlMinifier(code, {
+				removeComments: true,
+				collapseWhitespace: true,
+			});
+			break;
+		case ".js":
+			minified = (await terser(code)).code;
+			break;
+		case ".css":
+			minified = cleanCss.minify(code).styles;
+			break;
+	}
+
+	await fs.writeFile(out, minified);
+};
+
 const STRINGS_DIR = "data";
 const TEMPLATE_DIR = "src";
 const ASSETS_DIR = "assets";
@@ -24,18 +61,24 @@ fs.mkdir(DIST_DIR, { recursive: true });
 
 console.log("Copying assets...");
 
-for (const file of await fs.readdir(ASSETS_DIR))
-	await fs.copy(
-		path.join(ASSETS_DIR, file),
-		path.join(DIST_DIR, file),
-		{ overwrite: true },
-	);
+const processAssetsDir = async (dirs = []) => {
+	const assets = path.join(ASSETS_DIR, ...dirs);
+	const dist = path.join(DIST_DIR, ...dirs);
+
+	for (const entry of await fs.readdir(assets, { withFileTypes: true }))
+		if (entry.isDirectory())
+			await processAssetsDir(dirs.concat([ entry.name ]));
+		else
+			await minify(path.join(assets, entry.name), path.join(dist, entry.name));
+};
+
+processAssetsDir();
 
 console.log("Reading strings files...");
 
 let global = {};
 if (fs.existsSync(GLOBAL + ".toml"))
-	global = toml.parse((await fs.readFile(GLOBAL + ".toml")).toString("utf-8"));
+	global = toml.parse(await fs.readFile(GLOBAL + ".toml", "utf-8"));
 
 for (const file of await fs.readdir(STRINGS_DIR)) {
 	const ext = path.extname(file);
@@ -45,7 +88,7 @@ for (const file of await fs.readdir(STRINGS_DIR)) {
 	if (![".md", ".toml"].includes(ext)) continue;
 
 	const fullPath = path.join(STRINGS_DIR, file);
-	const contents = (await fs.readFile(fullPath)).toString("utf-8");
+	const contents = await fs.readFile(fullPath, "utf-8");
 
 	strings.set(
 		name,
@@ -76,7 +119,7 @@ const preprocessTemplate = async (filePath, stack = []) => {
 		process.exit(101);
 	}
 
-	let contents = (await fs.readFile(filePath)).toString("utf-8");
+	let contents = await fs.readFile(filePath, "utf-8");
 	const dir = path.dirname(filePath);
 
 	let index;
@@ -132,7 +175,7 @@ for (const [name, data] of strings.entries()) {
 		const stringValue = special[stringName]
 			?? walk(stringName, global)
 			?? walk(stringName, data.toml);
-		
+
 		if ((stringValue ?? null) == null) {
 			console.error("error:");
 			console.error(`  in template "${template}"`);
@@ -142,7 +185,7 @@ for (const [name, data] of strings.entries()) {
 
 			process.exit(101);
 		}
-		
+
 		contents = contents.substring(0, index)
 			+ stringValue
 			+ contents.substring(end + STRING_DELIMS[1].length);
@@ -150,6 +193,7 @@ for (const [name, data] of strings.entries()) {
 
 	const outputPath = path.join(DIST_DIR, name + ".html");
 	await fs.writeFile(outputPath, contents);
+	await minify(outputPath, outputPath);
 }
 
 console.timeEnd("Finished");
