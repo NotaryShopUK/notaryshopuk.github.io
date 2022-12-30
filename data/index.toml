@@ -1,4 +1,10 @@
 header = """
+Notary Public <br />
+services for you and <br />
+for your businesss.
+"""
+
+old-header = """
 <span class="green">Notarial services</span> <br />
 for <span class="italics">you</span> or <br />
 <span class="italics">your business</span>.
@@ -6,7 +12,7 @@ for <span class="italics">you</span> or <br />
 
 [page]
 title = "Welcome"
-description = "Notary services in the Northeast of England, including ???."
+description = "Notary services in the Northeast of England."
 
 [section1]
 title = "Our services"
@@ -40,13 +46,16 @@ us about doing thing for you.
 """
 
 [section2]
-title = "Professionalism"
+title = "What is a Notary Public?"
 body = """
-We are very professional. This is a business where everybody is business and
-think and do. And business is of profession with utmost professionalism in
-standards and working of business. We are of in and doing thing with you for
-haha funny not permitted in a professional working environment. Everything is
-top-sneaky stuff for tax fraud money do yes.
+A Notary Public is a highly-qualified and highly-regulated legal professional who
+specialises in authenticating, preparing, reviewing and advising upon various types
+of documentation which often relate to overseas transactions. As a regulated
+practice, we have to comply with strict professional, anti-money-laundering and
+data protection regulations, and we are required to maintain professional indemnity
+insurance. We are also subject to periodic review, and have to maintain our
+knowledge and professionalism by attendance at continuing professional education
+updates every year.
 """
 link = "/about"
 
@@ -96,7 +105,7 @@ top-sneaky stuff for tax fraud money do yes.
 link = "/about"
 
 [section5]
-title = "Give us your money"
+title = "Our location"
 subtext = """
 Data is stored in accordance with our <a href="/privacy">Privacy Policy</a>.
 """
