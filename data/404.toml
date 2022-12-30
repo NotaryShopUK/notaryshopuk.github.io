@@ -1,0 +1,5 @@
+image = "/img/teesside.jpg"
+
+[page]
+title = "404 Not Found"
+description = "Requested resource could not be found"
