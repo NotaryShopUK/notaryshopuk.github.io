@@ -9,7 +9,7 @@ Notary, Dermot Winters, (“Notary”) commit to comply with when processing
 personal data in the course of our business as notary public (“Business”).
 
 The Business has notified its data processing activities to the Information
-Commissioner’s Office under registration number: ***INSERT***.
+Commissioner’s Office under registration number: ZB478046.
 
 The Appendix contains a Glossary of the defined terms in this Policy.
 
