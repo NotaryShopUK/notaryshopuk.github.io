@@ -1,6 +1,6 @@
 header = """
 Notary Public <br />
-services for you and <br />
+Services for you and <br />
 for your businesss.
 """
 
@@ -19,22 +19,24 @@ title = "Our services"
 link = "/services"
 
 [section1.card1]
-title = "Thing 1"
+title = "For individuals"
 body = """
-We are great at doing this thing. We do this thing a lot for a good price. When
-you need to do this thing for that thing, use us to do that/this thing. Often,
-people who do thing need to do thing. If this is you, don't hesitate to conact
-us about doing thing for you.
+For people, we provide services including powers of attorney, attestation, and
+administration of oaths. We also provide documents such as those related to
+marriage abroad or children, property investment documentation, and others. For
+a full list, click "Learn more".
 """
+link = "/services"
 
 [section1.card2]
-title = "Thing 2"
+title = "For businesses"
 body = """
-We are great at doing this thing. We do this thing a lot for a good price. When
-you need to do this thing for that thing, use us to do that/this thing. Often,
-people who do thing need to do thing. If this is you, don't hesitate to conact
-us about doing thing for you.
+For enterprises, we can provide services including powers of attorney, attestation,
+statutory declarations, certificate protests, and provision of documents (including
+overseas property documentation, and corporate and foreign trade documents). For
+a full list, click "Learn more".
 """
+link = "/services"
 
 [section1.card3]
 title = "Thing 3"
