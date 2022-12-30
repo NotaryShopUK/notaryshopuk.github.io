@@ -13,7 +13,7 @@ Our firm is based in Darlington, Co. Durham.  We provide notarial services throu
 We welcome out-of-hours and/or off-site appointments including weekends
 (strictly subject to availability).
 
-We aim to respond to client needs within 48 hours of instruction, but if we are
+We aim to respond to client needs within 24 hours of instruction, but if we are
 unavailable for any reason, we will be able to recommend a highly qualified
 suitable alternative within the region.
 
