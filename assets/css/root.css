@@ -87,6 +87,13 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1800px) {
+  h1 {
+    font-size: 96px;
+    line-height: 96px;
+  }
+}
+
 h2 {
   color: var(--green-dark);
   font-size: 64px;
