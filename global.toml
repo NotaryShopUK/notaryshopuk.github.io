@@ -41,3 +41,4 @@ phone-uri = "tel:+44-7510-729-503" # if you update "phone", update this
 title = "How to find us"
 lon = -1.544663
 lat = 54.5236438
+directions = "https://www.google.com/maps/dir/?api=1&destination=Business%20Central,%202%20Union%20Square,%20Central%20Park,%20Darlington"
