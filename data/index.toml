@@ -46,10 +46,9 @@ title = "What is a Notary Public?"
 body = """
 A Notary Public is a highly-qualified and highly-regulated legal professional who
 specialises in authenticating, preparing, reviewing and advising upon various types
-of documentation which often relate to overseas transactions. As a regulated
-practice, we have to comply with strict professional, anti-money-laundering and
-data protection regulations, and we are required to maintain professional indemnity
-insurance.
+of documentation which often relate to overseas transactions. Every Notary Public
+has to comply with strict professional, anti-money-laundering and data protection
+regulations, and must maintain professional indemnity insurance.
 """
 link = "/about"
 
