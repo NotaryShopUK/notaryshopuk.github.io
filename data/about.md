@@ -36,6 +36,4 @@ assist on all of the above.
 
 As a Notary Public practice, we have to comply with strict professional,
 anti-money-laundering and data protection regulations, and we are required to
-maintain professional indemnity insurance. We are also subject to is subject to
-periodic review. We also have to maintain our knowledge and professionalism by
-attendance at continuing professional education updates every year.
+maintain professional indemnity insurance.
