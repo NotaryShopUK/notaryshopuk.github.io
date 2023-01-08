@@ -18,8 +18,8 @@ documents.
 
 We will need you to produce by way of formal identification the original of (in
 preferred order):
-* Your current passport (or, if not available), and
-* A current new driving licence (with photo) or national identity card
+* Your current passport, and/or
+* A current pictorial driving licence or national identity card.
 
 If neither of the above are available, at least two of the following
 * A current government or police issue certificate bearing a photo or other
@@ -34,8 +34,8 @@ advise you of this if necessary.
 
 **Proof of names**: In a case where the name on the document is different from
 the name you are currently using, or there has been a variation in the form of
-spelling of the name over the years, please provide me as appropriate with
-Certificates of Birth, Marriage or Divorce Decree or Change of Name Deed showing
+spelling of the name over the years, please provide us as appropriate with
+a Certificate of Birth, Marriage or Divorce Decree, or Change of Name Deed showing
 all the different names that you use.  If there has been a change of name, then
 we will need to see a copy of the Deed Poll or Statutory Declaration which dealt
 with it.
