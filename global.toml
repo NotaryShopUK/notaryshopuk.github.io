@@ -25,19 +25,19 @@ name = "Notary Shop UK"
 
 [contact]
 address = """
-Notary Shop Limited <br />
-10 Wherever Street <br />
-Someplace <br />
-England <br />
-AB12 3CD
+Business Central <br />
+2 Union Square <br />
+Central Park <br />
+Darlington <br />
+DL1 1GL
 """
-email = "hello@notaryshop.co.uk"
-email-uri = "mailto:hello@notaryshop.co.uk" # if you update "email", update this
-open = "Mon-Fri 3.00pm until 2.00pm"
-phone = "(+44) 01642 123 456"
-phone-uri = "tel:+44-1642-123-456" # if you update "phone", update this
+email = "enquiries@notaryshop.co.uk"
+email-uri = "mailto:enquiries@notaryshop.co.uk" # if you update "email", update this
+open = "Mon-Fri 8.00am until 6.00pm"
+phone = "(+44) 07510 729 503"
+phone-uri = "tel:+44-7510-729-503" # if you update "phone", update this
 
 [map]
 title = "How to find us"
-lon = -1.523174
-lat = 54.545047
+lon = 54.5236438
+lat = -1.544663
