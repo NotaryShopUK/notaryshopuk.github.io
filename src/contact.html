@@ -13,13 +13,13 @@
 		<main>
 			<section class="contact">
 				<h2>{{title}}</h2>
-			
+
 				<div class="contact-chips">
 					<a class="contact-chip" href="{{contact.phone-uri}}">
 						((../assets/svg/phone.svg))
 						<span>{{contact.phone}}</span>
 					</a>
-			
+
 					<a class="contact-chip" href="{{contact.email-uri}}">
 						((../assets/svg/email.svg))
 						<span>{{contact.email}}</span>
@@ -31,6 +31,7 @@
 					data-lon-lat="{{map.lon}}, {{map.lat}}"
 					data-name="{{brand.name}}"
 					data-address="{{contact.address}}"
+					data-directions="{{map.directions}}"
 				></div>
 			</section>
 		</main>

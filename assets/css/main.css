@@ -270,3 +270,24 @@ section.contact > form > div:last-child > .subtext {
 		height: 600px;
 	}
 }
+
+.directions {
+	right: .5em;
+	top: .5em;
+}
+
+.directions button {
+	width: fit-content;
+	height: fit-content;
+	padding: 5px;
+
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	font-weight: normal;
+}
+
+.directions button svg {
+	fill: var(--ol-subtle-foreground-color);
+}
