@@ -21,16 +21,14 @@ link = "/services"
 [section1.card1]
 title = "For individuals"
 body = """
-For people, we provide services including: Powers of Attorney, Attestation,
-Affidavits, Notarised copies of identity documents...
+Powers of Attorney, Attestation, Affidavits, Notarised copies of identity documents...
 """
 link = "/services#services-for-individuals"
 
 [section1.card2]
 title = "For businesses"
 body = """
-For enterprises, we provide services including: Powers of Attorney, Affidavits,
-Notarised copies of corporate documents and contracts...
+Powers of Attorney, Affidavits, Notarised copies of corporate documents and contracts...
 """
 link = "/services#services-for-business-enterprises"
 
