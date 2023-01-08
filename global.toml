@@ -39,5 +39,5 @@ phone-uri = "tel:+44-7510-729-503" # if you update "phone", update this
 
 [map]
 title = "How to find us"
-lon = 54.5236438
-lat = -1.544663
+lon = -1.544663
+lat = 54.5236438
