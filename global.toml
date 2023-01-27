@@ -33,7 +33,7 @@ DL1 1GL
 """
 email = "enquiries@notaryshop.co.uk"
 email-uri = "mailto:enquiries@notaryshop.co.uk" # if you update "email", update this
-open = "Mon-Fri 8.00am until 6.00pm"
+open = "for pre-booked appointments Mon-Fri 8.00am until 6.00pm"
 phone = "(+44) 07510 729 503"
 phone-uri = "tel:+44-7510-729-503" # if you update "phone", update this
 
