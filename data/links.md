@@ -1,7 +1,5 @@
 ## Useful links
 
-**Useful related external pages.**
-
 The Faculty of Notaries in England and Wales:
 [www.facultyoffice.org.uk](https://www.facultyoffice.org.uk)
 
